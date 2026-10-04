@@ -1,0 +1,333 @@
+{
+  "_meta": {
+    "source_repo": "MMS-ITS/Houstonhome",
+    "source_description": "14 WhatsApp screenshots containing Zillow share links and frontal elevation images, read 2026-10-04",
+    "extraction_note": "Zillow, Redfin, Realtor, Lennar and newhomesource all return HTTP 403 to direct fetch. Every figure below therefore comes from a web-search snippet, and each carries its own provenance field. Nothing is inferred silently.",
+    "price_confidence_levels": {
+      "confirmed": "exact list price appeared verbatim in a search snippet",
+      "derived": "computed from two published figures (e.g. $/sqft x sqft) and marked as arithmetic, not a quoted price",
+      "range_only": "only a community or plan-level range was published; the specific home's price is unknown",
+      "unknown": "no price located"
+    }
+  },
+
+  "properties": [
+    {
+      "id": "P01",
+      "image": "IMG_3489.jpeg",
+      "address": "4003 Somerville Dr",
+      "city": "Farmersville", "state": "TX", "zip": "75442",
+      "county": "Collin", "metro": "Dallas-Fort Worth",
+      "zpid": "464007540",
+      "builder": "Trophy Signature Homes",
+      "community": "Lakehaven",
+      "plan": "Holden (per sibling-lot listings)",
+      "beds": 4, "baths": 3, "sqft": null, "stories": 2,
+      "construction": "new",
+      "price": null,
+      "price_confidence": "range_only",
+      "price_basis": "Lakehaven community published as 'Priced From $239,990-$419,990'; a 2,937 sqft Lakehaven spec shown at $329,990 reduced from $334,990, but that is 3509 Eagle Mountain Dr, not this home.",
+      "provenance": [
+        "redfin.com/TX/Farmersville/4003-Somerville-Dr-75442/home/203201620 - 'four bedroom, three bathroom plan'",
+        "trophysignaturehomes.com/communities/farmersville/lakehaven - community price range"
+      ],
+      "flags": ["NOT_5BR", "NOT_HOUSTON", "PRICE_UNCONFIRMED"]
+    },
+    {
+      "id": "P02",
+      "image": "IMG_3490.jpeg / IMG_3502.jpeg (duplicate)",
+      "address": "117 Bayou Bend Ct",
+      "city": "Angleton", "state": "TX", "zip": "77515",
+      "county": "Brazoria", "metro": "Houston",
+      "zpid": "440099886",
+      "builder": "Century Communities",
+      "community": "Bayou Bend",
+      "plan": "Sinclair",
+      "beds": 4, "baths": 3.5, "sqft": 3075, "stories": 2,
+      "construction": "new",
+      "price": 359900,
+      "price_confidence": "confirmed",
+      "price_basis": "Trulia builder-community page lists '117 Bayou Bend Ct | 4bd 3.5ba 3,075 sqft | $359,900'.",
+      "provenance": [
+        "trulia.com/builder-community/bayou-bend--31163527 - address, beds, baths, sqft, price",
+        "realtor.com/.../117-Bayou-Bend-Ct_Angleton_TX_77515_M90932-28827 - Sinclair plan, 'over 3,000 square feet'",
+        "homes.com/new-homes/community/bayou-bend - Century Communities, $270K-$370K community range"
+      ],
+      "caution": "Do not confuse with 117 Bayou Bend BLVD (a different home: Carlsbad plan, 3bd, 2,220 sqft, $334,900).",
+      "flags": ["NOT_5BR"]
+    },
+    {
+      "id": "P03",
+      "image": "IMG_3491.jpeg",
+      "address": "214 Cross Gable Ln",
+      "city": "Dayton", "state": "TX", "zip": "77535",
+      "county": "Liberty", "metro": "Houston",
+      "zpid": "463396072",
+      "builder": "DRB Homes",
+      "community": "River Ranch",
+      "plan": "Meyerson",
+      "beds": 5, "baths": 3, "sqft": 2740, "stories": 2,
+      "construction": "new",
+      "price": 357990,
+      "price_confidence": "confirmed",
+      "price_basis": "HAR.com agent flyer for MLS 87266577 shows $357,990. Meyerson plan base is published at $327,990+, so this spec carries roughly $30k of upgrades or lot premium.",
+      "provenance": [
+        "har.com/flyer/2/mlnum/87266577 - $357,990",
+        "redfin.com/TX/Dayton/214-Cross-Gable-Ln-77535/home/198521410 - 'Meyerson plan features 5 bedrooms, 3 baths, an upstairs game room & a study'",
+        "drbhomes.com/.../river-ranch/home-plans/meyerson/floorplan - '5 Bedrooms | 3 Bathrooms | Approx. 2,740 Sq. Ft.'",
+        "trulia.com/builder-community-plan/river-ranch-meyerson-460911397 - $327,990+ base"
+      ],
+      "caution": "The supplied photo (IMG_3491) shows a SINGLE-STOREY elevation, but every source describes the Meyerson as a two-storey plan. The photo and the address disagree - verify which is correct before relying on the elevation.",
+      "flags": ["PHOTO_PLAN_MISMATCH"]
+    },
+    {
+      "id": "P04",
+      "image": "IMG_3492.jpeg",
+      "address": "1726 Primrose Pointe Dr",
+      "city": "Crosby", "state": "TX", "zip": "77532",
+      "county": "Harris", "metro": "Houston",
+      "zpid": "462899324",
+      "builder": "Lennar",
+      "community": "Synova - Majors Collection",
+      "plan": null,
+      "beds": 5, "baths": 4, "sqft": 2813, "stories": 2,
+      "construction": "new",
+      "price": 290990,
+      "price_confidence": "confirmed",
+      "price_basis": "Trulia builder-community page lists '1726 Primrose Pointe Dr | 5bd 4ba 2,813 sqft | $290,990'.",
+      "provenance": [
+        "trulia.com/builder-community/synova-majors-collection--32062252 - address, 5bd/4ba, 2,813 sqft, $290,990",
+        "redfin.com/TX/Crosby/1726-Primrose-Pointe-Dr-77532/home/198002176 - $111/sqft",
+        "redfin.com/TX/Crosby/Synova-Majors-Collection/community/46569638 - Lennar masterplan, rec center, trails, playgrounds, parks, lakes"
+      ],
+      "caution": "Redfin's $111/sqft against 2,813 sqft implies about $312k, which does not reconcile with $290,990 ($103/sqft). One of the two figures is stale. Treat $290,990 as the list price and re-confirm.",
+      "flags": ["SQFT_PRICE_DISCREPANCY"]
+    },
+    {
+      "id": "P05",
+      "image": "IMG_3493.jpeg",
+      "address": "820 Sugartree Dr",
+      "city": "Cleburne", "state": "TX", "zip": "76031",
+      "county": "Johnson", "metro": "Dallas-Fort Worth",
+      "zpid": "348862628",
+      "builder": "NHC (original builder); now a resale",
+      "community": "Villages of Mayfield Ph Two",
+      "plan": "Adams - Liberty Series",
+      "beds": 5, "baths": 2.5, "sqft": 3000, "stories": 2,
+      "construction": "resale",
+      "price": null,
+      "price_confidence": "unknown",
+      "price_basis": "Redfin notes 'List price was just lowered by $5K' but no absolute figure appeared in any snippet.",
+      "provenance": [
+        "redfin.com/TX/Cleburne/820-Sugartree-Dr-76031/home/190643207 - 'Built by NHC... Adams plan... Liberty Series... 5 beds 2.5 baths with a Loft AND a flex space AND a Primary bedroom on the main level... over 3000 square feet'",
+        "realtor.com/.../820-Sugartree-Dr_Cleburne_TX_76031_M95758-45935 - resale description, newly built deck, all five bedrooms with walk-in closets"
+      ],
+      "caution": "This is the only RESALE in the set - originally an October-completion new build (MLS 20608797), now relisted. Different negotiation dynamics and no builder warranty runway. Sqft recorded as 3,000 is a floor ('over 3000'), not an exact measure.",
+      "flags": ["RESALE", "NOT_HOUSTON", "PRICE_UNCONFIRMED", "SQFT_APPROXIMATE"]
+    },
+    {
+      "id": "P06",
+      "image": "IMG_3494.jpeg",
+      "address": "5646 Shelford Birch Dr",
+      "city": "Cut and Shoot", "state": "TX", "zip": "77303",
+      "county": "Montgomery", "metro": "Houston",
+      "zpid": "462855849",
+      "builder": "Starlight Homes (Ashton Woods' entry-level brand)",
+      "community": "Avalon Ridge",
+      "plan": "Pioneer",
+      "beds": 5, "baths": 4, "sqft": 2776, "stories": 2,
+      "construction": "new",
+      "price": 289990,
+      "price_confidence": "confirmed",
+      "price_basis": "Builder's own page states '$289,990 | 5646 Shelford Birch Drive | 5 Beds | 4 Baths 2,776 sq. ft.' Trulia agrees on price and sqft.",
+      "provenance": [
+        "starlighthomes.com/houston/avalon-ridge/pioneer - price, address, beds, baths, sqft (builder-direct, highest confidence)",
+        "redfin.com/TX/Cut-and-Shoot/5646-Shelford-Birch-Dr-77303/home/202098467 - 'Pioneer is a spacious two-story home offering 2,776 square feet with 5 bedrooms, 4 bathrooms'",
+        "trulia.com/builder-community/avalon-ridge--32045560 - $289,990"
+      ],
+      "caution": "Trulia's row for this address says 3ba while the builder and Redfin both say 4ba. Builder-direct figure preferred.",
+      "flags": ["BATH_COUNT_CONFLICT"]
+    },
+    {
+      "id": "P07",
+      "image": "IMG_3496.jpeg",
+      "address": "173 Cotton Cv",
+      "city": "Snook", "state": "TX", "zip": "77878",
+      "county": "Burleson", "metro": "Bryan-College Station",
+      "zpid": "464955648",
+      "builder": "Lennar",
+      "community": "Grand Lake - Classic Collection",
+      "plan": null,
+      "beds": null, "baths": null, "sqft": null, "stories": 2,
+      "construction": "new",
+      "price": null,
+      "price_confidence": "unknown",
+      "price_basis": "No snippet returned this specific address. Snook new-build asking prices seen from $260,990; Grand Lake Classic Collection described as 'coming soon'.",
+      "provenance": [
+        "redfin.com/city/17604/TX/Somerville/5-bedrooms - 'Classic Collection is a new series of single-family homes for sale, coming soon to the Grand Lake masterplan in Snook, TX'",
+        "trulia.com/TX/Snook/ - $260,990+ entry point for the market"
+      ],
+      "caution": "Least-documented property in the set. Zoned Snook ISD; roughly 20 miles from College Station.",
+      "flags": ["SPECS_UNKNOWN", "PRICE_UNCONFIRMED", "NOT_HOUSTON"]
+    },
+    {
+      "id": "P08",
+      "image": "IMG_3499.jpeg",
+      "address": "Stable View (community-level listing, no street address)",
+      "city": "Lafayette", "state": "LA", "zip": "70507",
+      "county": "Lafayette Parish", "metro": "Lafayette, LA",
+      "zpid": "347158307",
+      "builder": "D.R. Horton",
+      "community": "Stable View (Carencro area)",
+      "plan": "Rosemont",
+      "beds": 5, "baths": 3, "sqft": null, "stories": 2,
+      "construction": "new",
+      "price": null,
+      "price_confidence": "range_only",
+      "price_basis": "The zpid resolves to the Rosemont PLAN page, not a built home. Community range published as $230,500-$323,500.",
+      "provenance": [
+        "zillow.com/community/stable-view/347158307_zpid - 'Rosemont at Stable View... expansive two-story home combines a modern design of 5 bedrooms and 3 bathrooms'",
+        "trulia.com/builder-community/stable-view--30112649 - $230,500-$323,500",
+        "realtor.com/community-detail/Stable-View_102-Stable-View-Drive_Lafayette_LA_70507 - D.R. Horton, minutes from I-49 and I-10"
+      ],
+      "caution": "This is a PLAN, not a specific house. There is no fixed price, lot, or completion date to underwrite. Out of state - Louisiana insurance and tax regimes differ materially from Texas.",
+      "flags": ["PLAN_NOT_A_HOUSE", "OUT_OF_STATE", "NOT_HOUSTON"]
+    },
+    {
+      "id": "P09",
+      "image": "IMG_3501.jpeg",
+      "address": "6515 Little Yellow Ct",
+      "city": "Needville", "state": "TX", "zip": "77461",
+      "county": "Fort Bend", "metro": "Houston",
+      "zpid": "463337784",
+      "builder": "Lennar",
+      "community": "Monarch Landing - Majors Collection",
+      "plan": null,
+      "beds": null, "baths": null, "sqft": null, "stories": 2,
+      "construction": "new",
+      "price": null,
+      "price_confidence": "unknown",
+      "price_basis": "Searches surfaced neighbouring homesites on the same court (6506 Mays, 6510 DiMaggio, 6518 Cobb, 6519 DiMaggio, 6522 Gehrig, 6523 Aaron, 6527 Mays) but not 6515 itself.",
+      "provenance": [
+        "lennar.com/.../needville/monarch-landing6/majors-collection/* - neighbouring homesites confirm builder, community and collection",
+        "har.com/flyer/2/mlnum/16181578 - a flyer for this address exists but the snippet carried no price"
+      ],
+      "caution": "The supplied photo shows a two-storey brick-and-dark-siding elevation; the Cobb is the Majors two-storey plan (second floor with three bedrooms and a loft), so Cobb is the likely plan - but this is inference, not confirmed.",
+      "flags": ["SPECS_UNKNOWN", "PRICE_UNCONFIRMED"]
+    },
+    {
+      "id": "P10",
+      "image": "IMG_3503.jpeg",
+      "address": "722 Pescarola Dr",
+      "city": "Huffman", "state": "TX", "zip": "77336",
+      "county": "Harris", "metro": "Houston",
+      "zpid": "465421932",
+      "builder": "Lennar",
+      "community": "Sila - Bristol & Coastline Collections",
+      "plan": "Canon",
+      "beds": null, "baths": null, "sqft": null, "stories": 2,
+      "construction": "new - under construction",
+      "price": null,
+      "price_confidence": "unknown",
+      "price_basis": "Lennar's page for this exact address exists but returns 403 to direct fetch and the snippet carried no price. Neighbouring Pescarola homes show $122-$125/sqft.",
+      "provenance": [
+        "lennar.com/.../huffman/sila/bristol-coastline-collections/canon/22775515408 - 'Under construction Canon at 722 Pescarola Drive', flex space, covered patio, 'three additional bedrooms surround a versatile game room' on the second floor",
+        "redfin.com/TX/Huffman/733-Perscarola-Dr-77336/home/205477207 - $122/sqft nearby",
+        "redfin.com/TX/Huffman/731-Pescarola-DR-77336/home/205400387 - $125/sqft nearby"
+      ],
+      "caution": "Still under construction - completion date unknown, which matters for when rent actually starts. Bed count not established: 'three additional bedrooms' upstairs implies at least 4 total.",
+      "flags": ["UNDER_CONSTRUCTION", "SPECS_UNKNOWN", "PRICE_UNCONFIRMED"]
+    },
+    {
+      "id": "P11",
+      "image": "IMG_3504.jpeg",
+      "address": "Crest at Morganfield (community-level listing, no street address)",
+      "city": "Lake Charles", "state": "LA", "zip": "70607",
+      "county": "Calcasieu Parish", "metro": "Lake Charles, LA",
+      "zpid": "2058438243",
+      "builder": "DISPUTED - see caution",
+      "community": "Crest at Morganfield",
+      "plan": null,
+      "beds": null, "baths": null, "sqft": null, "stories": 2,
+      "construction": "new",
+      "price": null,
+      "price_confidence": "range_only",
+      "price_basis": "Two different communities of nearly the same name publish different ranges: $233,500-$324,500 (D.R. Horton) and $229,990-$267,990 (DSLD Homes).",
+      "provenance": [
+        "redfin.com/LA/Lake-Charles/Crest-at-Morganfield/community/4148 - attributes to D.R. Horton, '3-4 bedroom homes ranging from 1,447 sqft to 2,079 sqft'",
+        "trulia.com/builder-community/crest-at-morganfield--40467 - $233,500-$324,500",
+        "dsldhomes.com/communities/louisiana/lake-charles/the-crest-at-morganfield - DSLD Homes, advertising rates from 3.99% (6.788% APR) on FHA/RD/VA with up to $12,000 toward buydown or closing",
+        "newhomesource.com/basiccommunity/community-222745 - DSLD range $229,990-$267,990",
+        "realtor.com/community-detail/Crest-at-Morganfield_3106-Ravenwood-Drive - 'fourth phase', three/four/five bedroom homes"
+      ],
+      "caution": "Builder identity is genuinely unresolved: 'Crest at Morganfield' (D.R. Horton) and 'The Crest at Morganfield' (DSLD Homes) are both marketed in Lake Charles 70607. Redfin's D.R. Horton range caps at 4 bedrooms / 2,079 sqft, which would fail a 5-bedroom brief outright. Must be resolved before any offer.",
+      "flags": ["PLAN_NOT_A_HOUSE", "BUILDER_DISPUTED", "OUT_OF_STATE", "NOT_HOUSTON", "MAY_NOT_BE_5BR"]
+    },
+    {
+      "id": "P12",
+      "image": "IMG_3505.jpeg",
+      "address": "109 Peluce Pl",
+      "city": "Caldwell", "state": "TX", "zip": "77836",
+      "county": "Burleson", "metro": "Bryan-College Station",
+      "zpid": "463526472",
+      "builder": "Lennar",
+      "community": "Whitetail Run - Majors Collection",
+      "plan": "Ruth",
+      "beds": 5, "baths": 3, "sqft": 2750, "stories": 2,
+      "construction": "new - move-in ready",
+      "price": 277750,
+      "price_confidence": "derived",
+      "price_basis": "ARITHMETIC, NOT A QUOTED PRICE: Redfin's $101/sqft x Lennar's published 2,750 sqft = $277,750. Consistent with the collection range $212,990-$288,990. The real list price is probably $277,990 or near it, but no snippet stated it.",
+      "provenance": [
+        "lennar.com/.../whitetail-run/majors-collection/ruth - '2,750 Square ft.'",
+        "redfin.com/TX/Caldwell/109-Peluce-Pl-77836/home/202398230 - $101/sqft",
+        "realtor.com/.../109-Peluce-Pl_Caldwell_TX_77836_M90813-42354 - 'new two-story home features a convenient owner's suite on the first floor... An additional bedroom is located off the foyer'",
+        "trulia.com/builder-community/whitetail-run-majors-collection--32246435 - $212,990-$288,990",
+        "newhomesource.com/community/tx/caldwell/whitetail-run-majors-collection-by-lennar/225108 - 1,429-2,750 sqft, 7 floor plans"
+      ],
+      "caution": "Bed count of 5 is assembled from the layout description (owner's suite on floor one + one bedroom off the foyer + three upstairs), not from a stated '5 bedrooms'. Note also that Redfin lists a DIFFERENT Whitetail Run community in Caldwell built by D.R. Horton (1,321-1,892 sqft) - two builders share the community name, as in Lake Charles.",
+      "flags": ["PRICE_DERIVED", "BED_COUNT_INFERRED", "NOT_HOUSTON"]
+    },
+    {
+      "id": "P13",
+      "image": "IMG_3506.jpeg",
+      "address": "UNIDENTIFIED",
+      "city": null, "state": null, "zip": null,
+      "county": null, "metro": null,
+      "zpid": null,
+      "builder": null,
+      "community": null,
+      "plan": null,
+      "beds": null, "baths": null, "sqft": null, "stories": 1,
+      "construction": "new (builder rendering)",
+      "price": null,
+      "price_confidence": "unknown",
+      "price_basis": "No link, no address, no caption.",
+      "provenance": [],
+      "caution": "IMG_3506 is the only screenshot with NO Zillow link attached - it is a bare builder elevation rendering of a single-storey brick-and-stone home with a side-entry-look two-car garage. It cannot be scored. Identify it or drop it.",
+      "flags": ["UNIDENTIFIED"]
+    }
+  ],
+
+  "duplicates": [
+    {
+      "images": ["IMG_3490.jpeg", "IMG_3502.jpeg"],
+      "resolved_to": "P02",
+      "note": "Same home, same zpid 440099886, same photo, shared twice at 11:22 and 13:07."
+    }
+  ],
+
+  "inventory_reconciliation": {
+    "images_supplied": 14,
+    "duplicate_images": 1,
+    "unidentified_images": 1,
+    "unique_identified_properties": 12,
+    "with_confirmed_exact_price": 4,
+    "with_derived_price": 1,
+    "with_range_only": 3,
+    "with_no_price": 4,
+    "confirmed_5_bedroom": 6,
+    "confirmed_not_5_bedroom": 2,
+    "bedroom_count_unknown": 4
+  }
+}

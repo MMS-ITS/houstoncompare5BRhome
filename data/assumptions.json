@@ -1,0 +1,78 @@
+{
+  "_note": "Every number here is either sourced (see 'src') or an explicit judgement call (see 'basis'). Nothing is hidden inside the model code.",
+
+  "as_of": "2026-10-04",
+
+  "financing": {
+    "down_payment_pct": 0.25,
+    "down_payment_basis": "25% is the conventional floor for a non-owner-occupied 1-unit purchase; 20% is occasionally available but prices worse.",
+    "term_years": 30,
+    "rate_base": 0.0825,
+    "rate_low": 0.0775,
+    "rate_high": 0.0875,
+    "rate_basis": "National 30-yr fixed averaged 7.55% APR on 2026-10-04 (Bankrate), with Mortgage News Daily's top-tier index at 7.57%. Investment / non-owner-occupied loans price roughly 0.50-1.00 pt above primary, so 8.25% is the central case and 7.75-8.75% the band.",
+    "rate_src": [
+      "bankrate.com/mortgages/investment-property-rates/ - 30-yr fixed national average APR 7.55% on Sunday, October 04, 2026",
+      "mortgagenewsdaily.com/mortgage-rates - index 7.57% top-tier 30yr fixed",
+      "lendingtree.com/home/mortgage/investment-property-mortgage-rates/ - investor loans run a half to a full point above residential",
+      "themortgagereports.com/27698/... - investment property rates usually 0.5%-1% higher"
+    ],
+    "closing_costs_pct": 0.02,
+    "closing_costs_basis": "2% of price for title, origination, survey, prepaids. Texas purchases commonly run 2-3% for an investor buyer."
+  },
+
+  "operating": {
+    "vacancy_pct": 0.08,
+    "vacancy_basis": "One month of turnover roughly every 12 months (8.3%). Applied uniformly because no property-level vacancy data was obtainable; the exurban and rural markets here plausibly run worse.",
+    "maintenance_capex_pct": 0.08,
+    "maintenance_capex_basis": "Reserve against roof, HVAC, turn costs and make-ready. Lower than the usual 10% because 11 of 12 are new construction under builder warranty; the one resale carries the full 10% in the notes.",
+    "management_pct": 0.08,
+    "management_basis": "Third-party single-family management in Texas typically 8-10% of collected rent plus a letting fee. Assumes the owner does NOT self-manage, which is the realistic case for an out-of-area investor holding across three states.",
+    "leasing_fee_annualised_pct": 0.0,
+    "leasing_fee_note": "Deliberately set to zero and called out rather than buried: a half-to-full month letting fee on each turn would add roughly 4-8% of gross rent and push every result further negative."
+  },
+
+  "tax_rates": {
+    "_src": [
+      "lrgrealty.com/tools/texas-new-build-taxes-hoa-reality-check/ - 'Texas averages 1.6%-2.5%. New builds in MUD districts can hit 3%+'",
+      "comptroller.texas.gov/taxes/property-tax/rates/ - official per-unit rate register",
+      "brazoriacountytx.gov tax estimator and bcmud21.com - confirm live MUD levies in Brazoria County"
+    ],
+    "_warning": "These are MARKET-TYPICAL rates by county, not the actual levy on any specific parcel. A MUD, PID or SUD on a given subdivision can swing the figure by more than a full percentage point, which is worth more than any other single line in this model. Each seller email asks for the parcel's actual rate.",
+    "TX_Harris_MUD": 0.028,
+    "TX_Harris": 0.022,
+    "TX_Brazoria_MUD": 0.027,
+    "TX_Montgomery_MUD": 0.026,
+    "TX_Liberty": 0.023,
+    "TX_FortBend_MUD": 0.029,
+    "TX_Collin": 0.019,
+    "TX_Johnson": 0.019,
+    "TX_Burleson": 0.017,
+    "LA_Lafayette": 0.0055,
+    "LA_Calcasieu": 0.0065,
+    "LA_note": "Louisiana assesses residential at 10% of fair market value and grants a homestead exemption that a RENTAL DOES NOT GET. Effective rates on investor-held property are far below Texas but the exemption loss must be modelled, and Louisiana insurance more than offsets the saving."
+  },
+
+  "insurance_annual": {
+    "_basis": "Wind, hail and flood exposure dominate. Figures are order-of-magnitude for a new-build single-family at these values, not quotes. Gulf-coast and Louisiana placements have hardened sharply and are the single most volatile input after the tax rate.",
+    "_warning": "Not quoted. Every seller email requests a bindable quote, because a $2,000 error here is $167/month of cash flow.",
+    "TX_inland": 2600,
+    "TX_coastal_brazoria": 4200,
+    "TX_houston_metro": 3200,
+    "LA_lafayette": 4800,
+    "LA_lake_charles": 6000,
+    "LA_note": "Calcasieu Parish (Lake Charles) took direct hits from Hurricanes Laura and Delta in 2020; the admitted market there has contracted and premiums are among the highest in the continental US."
+  },
+
+  "hoa_annual": {
+    "_basis": "Master-planned amenity communities in Texas commonly run $600-1,200/yr; rural subdivisions far less. Not confirmed for any property - requested in every email.",
+    "masterplanned": 900,
+    "standard": 600,
+    "rural": 300
+  },
+
+  "rent_size_premium": {
+    "factor": 1.15,
+    "basis": "A published ZIP or city MEDIAN rent spans all sizes and property types, including apartments. The subject homes are 2,740-3,075 sqft with 4-5 bedrooms, well above the median unit, so the median is lifted by 15% where a size-specific comp was unavailable. This is a judgement call and it flatters the results; the sensitivity table shows what happens without it."
+  }
+}
